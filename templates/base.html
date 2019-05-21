@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'css/all.css' %}" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <!-- Custom -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <!--light box-->
+    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}" />
+
+    <title>Django {% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <!-- topbar -->
+    {% include 'partials/_topbar.html' %}
+
+    <!-- nav bar -->
+    {% include 'partials/_navbar.html' %}
+
+    <!-- main content -->
+    {% block content %} {% endblock %}
+
+    <!-- footer -->
+    {% include 'partials/_footer.html' %}
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/lightbox.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>
